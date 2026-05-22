@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Ediurs Agency</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- GLOBAL STYLES & COLORS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-shadow: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION BAR --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: #0b4a4f;
+        }
+        .logo-text {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        .login-btn {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 6px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* --- HERO BANNER --- */
+        .hero {
+            background: linear-gradient(rgba(11, 74, 79, 0.5), rgba(11, 74, 79, 0.5)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+        }
+        .hero h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 75px;
+            font-weight: 400;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+
+        /* --- INTRO SECTION --- */
+        .intro-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .badge-btn {
+            background-color: #0b4a4f;
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 600;
+            padding: 10px 35px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 25px;
+            cursor: pointer;
+        }
+        .intro-text {
+            font-size: 18px;
+            font-style: italic;
+            color: #0b4a4f;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        /* --- CONTENT SPLIT SECTION (GRID) --- */
+        .content-split {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: left;
+        }
+        .left-details h3 {
+            color: #0b4a4f;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .left-details p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .right-card {
+            background-color: #0b4a4f;
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 20px 20px 2px 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* --- SERVICES TITLE --- */
+        .services-title {
+            text-align: center;
+            margin: 80px 0 40px 0;
+        }
+        .services-title h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 55px;
+            color: #0b4a4f;
+        }
+
+        /* --- SERVICES GRID (RESPONSIVE) --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 1100px;
+            margin: 0 auto 100px auto;
+            padding: 0 20px;
+        }
+        .service-item {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .service-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .service-item h3 {
+            color: #0b4a4f;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .service-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #123e42;
+            color: #ffffff;
+            padding: 50px 5% 20px 5%;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .footer-links-group {
+            display: flex;
+            gap: 50px;
+        }
+        .footer-col h4 {
+            font-size: 14px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #a0c1c4;
+            text-decoration: none;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+        .footer-col ul li a:hover {
+            color: #ffffff;
+        }
+
+        /* --- ROBOT CONTAINER CSS --- */
+        #ediurs-chatbot-container {
+            position: fixed;
+            bottom: 30px; 
+            right: 25px;
+            z-index: 999999 !important;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        #robot-speech-bubble {
+            background: #0b4a4f;
+            color: #ffffff;
+            padding: 10px 16px;
+            border-radius: 18px 18px 2px 18px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            white-space: nowrap;
+            animation: fadeOutSequence 6s forwards;
+            animation-delay: 3s;
+        }
+        #robot-trigger {
+            width: 65px; 
+            height: 65px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        #robot-trigger:hover {
+            transform: scale(1.1) translateY(-3px);
+        }
+        #robot-avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25));
+        }
+
+        @keyframes fadeOutSequence {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0); display: none; }
+        }
+
+        /* Tawk.to elements hidden setup */
+        .tawk-minified, #tawk-chat-container, iframe[name^="tawkChatWidget"] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES (Phone & Tablet) --- */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Mobile par hamburger menu ya links chhipane ke liye */
+            .hero h1 { font-size: 45px; }
+            .content-split { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-links-group { flex-direction: column; gap: 30px; }
+            #robot-trigger { width: 55px; height: 55px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-text">EDIURS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><button class="login-btn">Login</button></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome To Ediurs Agency</h1>
+    </div>
+
+    <div class="intro-container">
+        <div class="badge-btn">Overview</div>
+        <p class="intro-text">
+            A warm welcome to all business owners, entrepreneurs, and industry professionals to EDIURS Agency.<br>
+            We are dedicated to providing a unique and superior experience, empowering your business to grow through innovative ideas and smart, strategic solutions.
+        </p>
+
+        <div class="content-split">
+            <div class="left-details">
+                <div class="badge-btn" style="font-size:16px; padding: 6px 20px;">Our Process</div>
+                <p><strong>We combine AI and human intelligence to save your time while ensuring accuracy and safety.</strong></p>
+                
+                <h3>Why EDIURS Agency?</h3>
+                <p>We do not consider our clients as typical customers – we consider you as Our Strategic Business Partners. Our success happens only when you grow.</p>
+                
+                <h3>Global Infrastructure</h3>
+                <p>EDIURS Agency functions on a global scale. Out cloud infrastructure guarantees data security and 24/7 availability.</p>
+            </div>
+            
+            <div class="right-card">
+                <h4>What We Bring to the Table</h4>
+                <p style="margin-top: 15px;">If you want to take your business to the next level, you are in the right place. We provide powerful AI-based solutions within 10 professional categories – which are specially designed for your growth. Our focus is not just on quality, but on the best quality and speed.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="services-title">
+        <h2>Start Free Trial!</h2>
+    </div>
+
+    <div class="services-grid">
+        <div class="service-item">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="AI Support">
+            <h3>Multi Language Support & Personal Agent</h3>
+            <p>We speak your language. Wherever you are from, we match you with a dedicated personal agent fluent in your language to guide you step by step.</p>
+        </div>
+        <div class="service-item">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="E-Commerce">
+            <h3>E-Commerce & Retail (Sales Focus)</h3>
+            <p>AI Specialized Tools for sales funnel optimization, inventory tracking, and revenue growth management.</p>
+        </div>
+        <div class="service-item">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Business Intelligence">
+            <h3>Business & Legal Intelligence (Ethical)</h3>
+            <p>AI Intelligence Tools for market research analysis, contract management strategies, and ethical business forecasting.</p>
+        </div>
+        <div class="service-item">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Visual Studio">
+            <h3>EDIURS Visual Studio (Design & Utility)</h3>
+            <p>AI Creative Services ranging from professional brand identity designs to automated video and visual content output.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-text" style="font-size: 32px;">EDIURS</div>
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <h4>Overview</h4>
+                    <ul>
+                        <li><a href="overview.html">Features</a></li>
+                        <li><a href="services.html">Services Hierarchy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Support Desk</a></li>
+                        <li><a href="contact.html">Global Offices</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; font-size: 12px; color: #a0c1c4; border-top: 1px solid #1c565b; padding-top: 20px;">
+            &copy; 2026 EDIURS Agency. All Rights Reserved. (Zero Branding Hosting)
+        </p>
+    </footer>
+
+    <div id="ediurs-chatbot-container">
+        <div id="robot-speech-bubble">Hi everyone! 👋</div>
+        <div id="robot-trigger" onclick="toggleTawkChat()">
+            <img id="robot-avatar" src="https://framerusercontent.com/images/3HBp9bWuNPXdUmznW7zOw3oVp8.png?width=512&height=488" alt="EDIURS Robot">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    
+    Tawk_API.onLoad = function(){
+        Tawk_API.hideWidget();
+    };
+    Tawk_API.onChatMinimized = function(){
+        Tawk_API.hideWidget();
+    };
+
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6a0760b558927f1c34944c43/1jomd3i8e';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+
+    function toggleTawkChat() {
+        if (window.Tawk_API) {
+            if (window.Tawk_API.isChatMaximized()) {
+                window.Tawk_API.minimize();
+                window.Tawk_API.hideWidget();
+            } else {
+                window.Tawk_API.showWidget();
+                window.Tawk_API.maximize();
+            }
+        }
+    }
+    </script>
+</body>
+</html>
