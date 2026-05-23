@@ -4,265 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome To Ediurs Agency</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <style>
-        /* --- GLOBAL STYLES & COLORS --- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #ffffff;
-            color: #0b4a4f; /* Pure layout dark teal primary text color */
-            overflow-x: hidden;
-        }
-
-        /* --- NAVIGATION BAR --- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background-color: #0b4a4f;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo-icon {
-            width: 30px;
-            height: 30px;
-            object-fit: contain;
-        }
-        .logo-text {
-            color: #ffffff;
-            font-size: 26px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-            align-items: center;
-        }
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 400;
-            transition: 0.3s;
-        }
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-        .login-btn {
-            background-color: transparent;
-            color: #ffffff;
-            border: 1px solid #ffffff;
-            padding: 7px 22px;
-            border-radius: 20px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 14px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .login-btn:hover {
-            background-color: #ffffff;
-            color: #0b4a4f;
-        }
-
-        /* --- HERO BANNER (Aapka Real Design) --- */
-        .hero {
-            position: relative;
-            background: url('https://framerusercontent.com/images/egYYOJBqIIcl27XlkyjkNM5nrSg.jpg?scale-down-to=2048&width=8192&height=4672') no-repeat center center/cover;
-            height: 520px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #ffffff;
-        }
-        .hero h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 95px;
-            font-weight: 400;
-            line-height: 1.1;
-            text-shadow: 0px 4px 15px rgba(0,0,0,0.25);
-        }
-
-        /* --- MAIN CENTERED CONTENT BLOCK --- */
-        .main-wrapper {
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        
-        .sub-heading-explore {
-            font-size: 18px;
-            font-family: 'Great Vibes', cursive;
-            font-weight: 400;
-            color: #0b4a4f;
-            margin-bottom: 20px;
-        }
-
-        /* Perfectly rounded pill buttons from your canvas */
-        .pill-btn {
-            background-color: #0b4a4f;
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 500;
-            padding: 10px 45px;
-            border-radius: 25px;
-            display: inline-block;
-            margin-bottom: 30px;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(11, 74, 79, 0.2);
-        }
-        
-        .intro-paragraph {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 18px;
-            line-height: 1.7;
-            color: #0b4a4f;
-            margin-bottom: 40px;
-        }
-
-        /* --- INNER SECTION (Why Ediurs Block) --- */
-        .inner-details-section {
-            margin-top: 50px;
-            border-top: 1px solid rgba(11, 74, 79, 0.1);
-            padding-top: 40px;
-        }
-        .inner-details-section h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 35px;
-            margin-bottom: 12px;
-            color: #0b4a4f;
-        }
-        .inner-details-section p {
-            font-size: 14.5px;
-            line-height: 1.6;
-            color: #3d6e72;
-            margin-bottom: 15px;
-        }
-
-        /* --- SERVICES CONTAINER --- */
-        .services-section {
-            max-width: 1100px;
-            margin: 40px auto 100px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-        
-        .services-main-title {
-            font-family: 'Great Vibes', cursive;
-            font-size: 65px;
-            color: #0b4a4f;
-            margin-bottom: 50px;
-        }
-
-        /* --- GRID LAYOUT --- */
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px 40px;
-            text-align: center;
-        }
-        .service-card {
+            background-color: #0b4a4f; /* Aapki agency ka dark teal background theme color */
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
+            justify-content: center;
+            position: relative;
         }
-        .service-card img {
+        
+        /* Website Wrapper */
+        .site-container {
+            position: relative;
             width: 100%;
-            max-width: 480px;
-            height: 240px;
-            object-fit: cover;
-            border-radius: 4px; /* Slight framing rounding as per screenshot */
-            margin-bottom: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-        }
-        .service-card h4 {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 22px;
-            font-weight: 600;
-            color: #0b4a4f;
-            margin-bottom: 12px;
-        }
-        .service-card p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #444444;
-            max-width: 450px;
+            max-width: 1440px; /* Standard PC screen size */
+            height: auto;
         }
 
-        /* --- FOOTER BRAGGING THE BRAND --- */
-        footer {
-            background-color: #0b4a4f;
-            color: #ffffff;
-            padding: 60px 8% 30px 8%;
-        }
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 40px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 40px;
-        }
-        .footer-logo-col h2 {
-            font-size: 36px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        .footer-links-wrapper {
-            display: flex;
-            gap: 80px;
-        }
-        .footer-links-col h5 {
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .footer-links-col ul {
-            list-style: none;
-        }
-        .footer-links-col ul li {
-            margin-bottom: 10px;
-        }
-        .footer-links-col ul li a {
-            color: rgba(255, 255, 255, 0.75);
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-        .footer-links-col ul li a:hover {
-            color: #ffffff;
-        }
-        .copyright-text {
-            text-align: center;
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.5);
-            margin-top: 30px;
+        /* Aapki Canva Wali Full Image */
+        .canva-design {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
-        /* --- FLOATING BLUE ROBOT --- */
+        /* --- INVISIBLE CLICKABLE LINKS OVERLAY --- */
+        /* Yeh links aapki picture ke buttons ke upar invisible boxes banadeinge */
+        .invisible-link {
+            position: absolute;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0); /* Bilkul transparent */
+        }
+        
+        /* Nav Menu: Home Link */
+        .link-home { top: 0.5%; left: 58%; width: 5%; height: 1.5%; }
+        /* Nav Menu: Contact Link */
+        .link-contact { top: 0.5%; left: 63%; width: 6%; height: 1.5%; }
+        /* Nav Menu: Overview Link */
+        .link-overview { top: 0.5%; left: 70%; width: 6%; height: 1.5%; }
+        /* Nav Menu: Services Link */
+        .link-services { top: 0.5%; left: 77%; width: 6%; height: 1.5%; }
+        /* Nav Menu: Login Button */
+        .link-login { top: 0.4%; left: 85%; width: 7%; height: 1.8%; border-radius: 20px; }
+        
+        /* Main Body Big Overview Button */
+        .main-overview-btn { top: 13.2%; left: 44%; width: 12%; height: 2.2%; border-radius: 25px; }
+
+        /* --- FLOATING BLUE ROBOT CHATBOT --- */
         #ediurs-chatbot-container {
             position: fixed;
             bottom: 30px; 
@@ -311,114 +105,21 @@
             visibility: hidden !important;
             opacity: 0 !important;
         }
-
-        /* --- TABLET & MOBILE RESPONSIVE SIDE SYSTEM --- */
-        @media (max-width: 820px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 60px; }
-            .services-grid { grid-template-columns: 1fr; gap: 50px; }
-            .footer-top { flex-direction: column; gap: 30px; }
-            .footer-links-wrapper { width: 100%; justify-content: space-between; gap: 20px; }
-            #robot-trigger { width: 55px; height: 55px; }
-        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo-container">
-            <div class="logo-text">EDIURS</div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="overview.html">Overview</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><button class="login-btn">Login</button></li>
-        </ul>
-    </nav>
+    <div class="site-container">
+        <img src="design.png" alt="Ediurs Agency Website" class="canva-design">
 
-    <div class="hero">
-        <h1>Welcome To Ediurs<br>Agency</h1>
-    </div>
-
-    <div class="main-wrapper">
-        <p class="sub-heading-explore">Let's explore EDIURS Agency</p>
-        <div><a href="overview.html" class="pill-btn">Overview</a></div>
+        <a href="index.html" class="invisible-link link-home" title="Home"></a>
+        <a href="contact.html" class="invisible-link link-contact" title="Contact"></a>
+        <a href="overview.html" class="invisible-link link-overview" title="Overview"></a>
+        <a href="services.html" class="invisible-link link-services" title="Services"></a>
+        <a href="login.html" class="invisible-link link-login" title="Login"></a>
         
-        <p class="intro-paragraph">
-            A warm welcome to all business owners, entrepreneurs, and industry professionals to EDIURS Agency.<br>
-            We are dedicated to providing a unique and superior experience, empowering your business to grow through innovative ideas and smart, strategic solutions.
-        </p>
-
-        <div class="inner-details-section">
-            <div><a href="overview.html" class="pill-btn" style="font-size:15px; padding: 6px 30px; margin-bottom:15px;">Our Process</a></div>
-            <p><strong>We combine AI and human intelligence to save your time while ensuring accuracy and safety.</strong></p>
-            
-            <h3>Why EDIURS Agency?</h3>
-            <p>We do not consider our clients as typical customers – we consider you as Our Strategic Business Partners. Our success happens only when you grow.</p>
-            
-            <h3>Global Infrastructure</h3>
-            <p>EDIURS Agency functions on a global scale. Our cloud infrastructure guarantees data security and 24/7 availability.</p>
-            
-            <h3 style="margin-top:40px;">What We Bring to the Table</h3>
-            <p>If you want to take your business to the next level, you are in the right place. We provide powerful AI-based solutions within 10 professional categories – which are specially designed for your growth. Our focus is not just on quality, but on the best quality and speed.</p>
-        </div>
+        <a href="overview.html" class="invisible-link main-overview-btn" title="Go to Overview"></a>
     </div>
-
-    <div class="services-section">
-        <h2 class="services-main-title">Start Free Trial!</h2>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="AI Support">
-                <h4>Multi Language Support & Personal Agent</h4>
-                <p>We speak your language. Wherever you are from, we match you with a dedicated personal agent fluent in your language to guide you step by step.</p>
-            </div>
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="E-Commerce Focus">
-                <h4>E-Commerce & Retail (Sales Focus)</h4>
-                <p>AI Specialized Tools for sales funnel optimization, inventory tracking, and revenue growth management.</p>
-            </div>
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Business Legal">
-                <h4>Business & Legal Intelligence (Ethical)</h4>
-                <p>AI Intelligence Tools for market research analysis, contract management strategies, and ethical business forecasting.</p>
-            </div>
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Visual Identity">
-                <h4>EDIURS Visual Studio (Design & Utility)</h4>
-                <p>AI Creative Services ranging from professional brand identity designs to automated video and visual content output.</p>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-top">
-            <div class="footer-logo-col">
-                <h2>EDIURS</h2>
-            </div>
-            <div class="footer-links-wrapper">
-                <div class="footer-links-col">
-                    <h5>Overview</h5>
-                    <ul>
-                        <li><a href="overview.html">Features</a></li>
-                        <li><a href="services.html">Services Hierarchy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links-col">
-                    <h5>Contact</h5>
-                    <ul>
-                        <li><a href="contact.html">Support Desk</a></li>
-                        <li><a href="contact.html">Global Offices</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <p class="copyright-text">
-            &copy; 2026 EDIURS Agency. All Rights Reserved. (Zero Branding Private Server)
-        </p>
-    </footer>
 
     <div id="ediurs-chatbot-container">
         <div id="robot-speech-bubble">Hi everyone! 👋</div>
